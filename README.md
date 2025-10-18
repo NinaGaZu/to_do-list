@@ -36,3 +36,15 @@ CREATE TABLE tareas (
     creada_en DATETIME DEFAULT CURRENT_TIMESTAMP,
     estado VARCHAR(20) DEFAULT 'pendiente'
 );
+```
+
+## 📚 Estructura del Proyecto
+
+|Archivo |Función|
+|--------|-------|
+|index.php|Vista Principal. Muestra el formulario para añadir y la lista de tareas. (Lógica de Lectura - READ)|
+|crear.php|Lógica de Creación (CREATE). Recibe datos del formulario y los inserta en la BD.|
+|actualizar.php|Lógica de Actualización (UPDATE). Cambia el estado de la tarea (pendiente/completada).|
+|eliminar.php|Lógica de Eliminación (DELETE). Borra la tarea según el ID.|
+|db_config.php|Maneja la conexión a la base de datos usando PDO.|
+|styles.css|Define la apariencia visual y el diseño responsivo del proyecto.|

@@ -2,10 +2,11 @@
 //Conexión a la base de datos
 require 'db_config.php';
 
-//Consultar  todas las tareas
+//Lógica para Leer (READ) todas las tareas
+// Usamos prepare/execute para un manejo uniforme, aunque query() también funcionaría sin parámetros.
 $stmt = $pdo->prepare('SELECT * FROM tareas ORDER BY id DESC');
-$stmt->execute();
-$tareas = $stmt->fetchAll();
+$stmt->execute(); // Ejecuta la consulta a la BD
+$tareas = $stmt->fetchAll(); // Obtiene todos los resultados en el array $tareas
 ?>
 
 
