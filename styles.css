@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* Estilos Globales y de Cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Fondo gris claro suave */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinear arriba */
+    padding-top: 50px;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #3498db; /* Línea de color debajo del título */
+    padding-bottom: 10px;
+}
+
+/* Estilos para el Formulario de Añadir Tarea */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+form input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #2ecc71; /* Verde esmeralda */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #27ae60;
+}
+
+/* Estilos para la Lista de Tareas */
+.lista-de-tareas {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.tarea-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    background-color: #ecf0f1; /* Gris claro para los ítems */
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.tarea-item:hover {
+    background-color: #dde1e2;
+}
+
+.tarea-item span {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #34495e;
+    word-break: break-word; /* Para manejar textos largos */
+}
+
+/* Estilos para los enlaces de acción (Completar/Eliminar) */
+.tarea-item a {
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 15px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+}
+
+/* Estilo para el botón de 'Completar' (pendiente) */
+.tarea-item a:nth-of-type(1) {
+    color: #3498db; /* Azul */
+    border: 1px solid #3498db;
+}
+/* Estilo para el botón de 'Eliminar' */
+.tarea-item a:nth-of-type(2) {
+    color: #e74c3c; /* Rojo */
+    border: 1px solid #e74c3c;
+}
+
+.tarea-item a:hover {
+    opacity: 0.8;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form button, form input[type="text"] {
+        width: auto;
+    }
+
+    .tarea-item {
+        flex-wrap: wrap;
+    }
+    
+    .tarea-item span {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .tarea-item a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
